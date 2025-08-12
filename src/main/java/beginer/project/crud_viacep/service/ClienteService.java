@@ -14,14 +14,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-
+@AllArgsConstructor
 public class ClienteService {
 
     private final ClienteRepository clienteRepository;
-
-    public ClienteService(ClienteRepository clienteRepository) {
-        this.clienteRepository = clienteRepository;
-    }
 
     public ClienteResponseDto insertClient(ClienteRequestDto requestDto) {
         Cliente model = toModel(requestDto);
