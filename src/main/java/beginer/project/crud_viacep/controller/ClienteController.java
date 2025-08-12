@@ -3,17 +3,20 @@ package beginer.project.crud_viacep.controller;
 import beginer.project.crud_viacep.dto.ClienteRequestDto;
 import beginer.project.crud_viacep.dto.ClienteResponseDto;
 import beginer.project.crud_viacep.service.ClienteService;
-import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/clients")
-@AllArgsConstructor
+
 public class ClienteController {
 
     private final ClienteService service;
+
+    public ClienteController(ClienteService service) {
+        this.service = service;
+    }
 
     @PostMapping
     public ClienteResponseDto insertClientController(@RequestBody ClienteRequestDto requestDto) {
