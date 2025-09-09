@@ -1,15 +1,9 @@
-package beginer.project.crud_viacep.model;
+package beginer.project.crud_viacep.dto;
 
-
-import jakarta.persistence.Embeddable;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-
-@Embeddable
 @Data
-public class Viacep {
+public class ViacepRequestDto {
 
     private String cep;
     private String logradouro;
@@ -21,6 +15,4 @@ public class Viacep {
     private String estado;
     private String regiao;
     private String ibge;
-    private String gia;
-    private String ddd;
 }
