@@ -1,6 +1,7 @@
 package beginer.project.crud_viacep.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,8 +10,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "CLIENTE")
-@Getter
-@Setter
+@Data
 public class Cliente {
 
     @Id
